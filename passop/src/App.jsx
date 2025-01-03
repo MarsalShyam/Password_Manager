@@ -9,8 +9,10 @@ function App() {
   return (
     <>
     <Navbar/>
-    
+    <div>
     <Manager/>
+    </div>
+    
   
     
     <Footer/>
