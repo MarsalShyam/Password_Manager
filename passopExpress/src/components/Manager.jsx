@@ -18,7 +18,6 @@ const Manager = () => {
   }, []);
 
   const copyText = (text) => {
-    navigator.clipboard.writeText(text);
     toast('Copied to Clipboard!', {
       position: "top-right",
       autoClose: 2000,
@@ -30,6 +29,7 @@ const Manager = () => {
       theme: "light",
       // transition: Bounce,
     });
+    navigator.clipboard.writeText(text);
   }
 
   const showPassword = () => {
@@ -43,10 +43,10 @@ const Manager = () => {
       psRef.current.src = "/icons/eye-off-fill.svg"
       passworRef.current.type = "text"
     }
-  }
 
+  }
   const savePassword = () => {
-    if (form.site.length > 3 && form.username.length > 3 && form.password.length> 3) {
+    if (form.site.length > 3 && form.site.username > 3 && form.site.password > 3) {
       setPasswordArray([...passwordArray, { ...form, id: uuidv4() }])
       localStorage.setItem("passwords", JSON.stringify([...passwordArray, { ...form, id: uuidv4() }]))
       // console.log([...passwordArray, form]);
@@ -68,8 +68,8 @@ const Manager = () => {
         autoClose: 2000,
       });
     }
-  }
 
+  }
   const deletePassword = (id) => {
     let c = confirm("Do you really want to delete this password?");
     if (c) {
@@ -120,11 +120,9 @@ const Manager = () => {
         theme="light"
       // transition={Bounce}
       />
-      <div className="absolute inset-0 -z-10 h-full w-full bg-green-100 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
-        <div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d5c5ff,transparent)]"></div>
-        </div>
+      <div className="absolute inset-0 -z-10 h-full w-full bg-green-100 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"><div className="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d5c5ff,transparent)]"></div></div>
 
-      <div className=" pt-2 md:mycontainer px-2 md:px-0 min-h-[86vh]">
+      <div className=" pt-2 md:mycontainer px-2 md:px-0 min-h-[89vh]">
         <h1 className='text text-4xl font-bold text-center'>
           <span className='text-green-500'>&lt;</span>
           Pass
@@ -141,9 +139,10 @@ const Manager = () => {
             <div className="relative">
               <input ref={passworRef} onChange={handleChange} value={form.password} placeholder='Enter Password' className='rounded-full border border-green-500 w-full p-4 py-1' type="password" id="password" name="password" />
 
-              <span className='absolute right-[20px] top-[7px] hover:cursor-pointer' onClick={showPassword}>
+              <span className='absolute right-[4px] top-[7px] hover:cursor-pointer' onClick={showPassword}>
                 <img ref={psRef} className='w-[20px]' src="/icons/eye-fill.svg" alt='' />
               </span>
+
             </div>
 
 

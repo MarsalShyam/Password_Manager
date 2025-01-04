@@ -12,6 +12,9 @@ function App() {
     <div>
     <Manager/>
     </div>
+    
+  
+    
     <Footer/>
     </>
   )
