@@ -6,13 +6,12 @@
   "homepage":"https://MarsalShyam.github.io/Password_Manager",
   "scripts": {
     "predeploy": "npm run build", 
-    "deploy": "gh-pages -d build", 
+    "deploy": "gh-pages -d dist", 
     "start": "react-scripts start", 
-    "build": "react-scripts build", 
+    "build": "vite build", 
     "test": "react-scripts test", 
     "eject": "react-scripts eject",
     "dev": "vite",
-    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
