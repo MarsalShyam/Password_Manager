@@ -175,7 +175,7 @@ const Manager = () => {
                       <div className='flex items-center justify-center gap-3'>
                         <a href={item.site} target='_black'>{item.site}</a>
                         <div className='copyicon size-7 cursor-pointer' onClick={() => { copyText(item.site) }}>
-                          <img className=' w-[23px] h-[23px] pt-[3px] pl-[3px]' src="/icons/clipboard-fill.png" alt="" />
+                          <img className=' w-[23px] h-[23px] pt-[3px] pl-[3px]' src="/icons/clipboard-fill.png" alt="copy" />
                         </div>
                       </div>
                     </td>
@@ -184,7 +184,7 @@ const Manager = () => {
                       <div className='flex items-center justify-center gap-3'>
                         <span>{item.username} </span>
                         <div className='copyicon size-7 cursor-pointer' onClick={() => { copyText(item.username) }}>
-                          <img className='w-[23px] h-[23px] pt-[3px] pl-[3px]' src="/icons/clipboard-fill.png" alt="" />
+                          <img className='w-[23px] h-[23px] pt-[3px] pl-[3px]' src="/icons/clipboard-fill.png" alt="copy" />
                         </div>
                       </div>
                     </td>
@@ -193,7 +193,7 @@ const Manager = () => {
                       <div className='flex items-center justify-center gap-3'>
                         <span>{item.password}</span>
                         <div className='copyicon size-7 cursor-pointer' onClick={() => { copyText(item.password) }}>
-                          <img className='w-[23px] h-[23px] pt-[3px] pl-[3px]' src="/icons/clipboard-fill.png" alt="" />
+                          <img className='w-[23px] h-[23px] pt-[3px] pl-[3px]' src="/icons/clipboard-fill.png" alt="copy" />
                         </div>
                       </div>
                     </td>
